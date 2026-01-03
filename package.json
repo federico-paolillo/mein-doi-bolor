@@ -1,0 +1,27 @@
+{
+	"name": "mein-doi-bolor",
+	"version": "0.0.1",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"clean": "go clean",
+		"build": "go build -o ./bin/cli ./cmd/cli/main.go",
+		"dev": "go run cmd/cli/main.go",
+		"format": "gofmt -l .",
+		"format:fix": "gofmt -w",
+		"lint": "golangci-lint run",
+		"lint:fix": "golangci-lint run --fix",
+		"test": "go test -v -shuffle=on ./...",
+		"vet": "go vet",
+		"ci:local": "act",
+		"prepare": "lefthook install"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.4.1",
+	"devDependencies": {
+		"@commitlint/cli": "^19.0.0",
+		"@commitlint/config-conventional": "^19.0.0"
+	}
+}
